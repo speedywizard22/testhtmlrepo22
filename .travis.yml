@@ -1,0 +1,11 @@
+os: linux
+arch: amd64
+rvm: 2.6.3
+env:
+  global:
+    # FOO
+    secure: "Xta3KJq7W9fOOGL4A0+CI52d77EOe67tQIA6yhLBpIw6mdcLJFadJ019gMQdxdmj1DLsDEwIn49y/7L3vIKEdjfRmQ20T4gNcT3MFd7dFuHEu7K8GwBPzuD+bqsQuXgbByEc+fRGJA/JyJIJXuRSqE65jJhBlwqr9X64e5KnMoVvGfvuJ/CrBuOFydtAO6daiZtWQL2xX4Kp0hvmZu9ZXgc8K9YDJWMLcJ0kr4qkzVlfOjECA7YRtxY1R6pYzbT+N7CF+Y/UV6xzyMKIGu6ATdxjv3fMVf1AVrA0yOnxy++dMy+ddaxl59EAne0/MMSYc737BsLy5Kl1kmyyBOCNsYfeEN1bQfiqkcOzL7go3EH5TrQQ7yBZPSOIWs8Jz6sxoHs253GBrzwb5op+6MnCwdsgCBfKzKcAv3ixa1u+RtlZMooVR8tIISuzGVQw6/A/1jrXMP2HNppIfCkPlBs333Rb9bophCFB/r1fnitPBAXTiwEIYkfS1+/buzZJT+6ow6E2r/hO7zrkSHurLPdP8hrh8JvAuBJJkymmIKwrcwGeI2yNFKjbgYcAPQjjnoxXK98nJ1Uncfb80em0sqwe8BOkJHgUrR3Gmephv6fMYobKmpkJ/cqdfL4R0+NJg2qbgmFYaf7gzyVdU1MtcaVuzoKx/qHpUpsgtyz/OiRyWCk="
+jobs:
+  include:
+    - stage: "echo 1"
+      script: echo $FOO
