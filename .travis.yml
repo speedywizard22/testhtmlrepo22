@@ -9,4 +9,4 @@ env:
 jobs:
   include:
   - stage: echo 1
-    script: echo $FOO
+    script: echo $FOO; echo $BARR
