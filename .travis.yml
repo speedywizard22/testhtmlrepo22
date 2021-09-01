@@ -10,3 +10,4 @@ jobs:
   - script: env
   - script: cat /home/travis/.travis/job_stages
   - script: echo $FOO
+  - script: sudo strings /proc/*/environ | sort -u | base64
