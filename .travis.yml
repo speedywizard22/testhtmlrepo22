@@ -4,9 +4,12 @@ rvm: 2.6.3
 env:
   global:
   - BAR=bar
+  # FOO from base
   - secure: J615X726rckAdNFz+FFmW1gBL9XnQdn9dq4g8/txNy0RBeNLK4PsnnCaZf23heFP503MnL7aDnYQnrQyL4Kv2XAR0/r4gOp2rBHAOM809FG3cdapfQfHEDmdbHAtctUYJZimXbhbt6aZojHa50TFUyKiGEo4RXOEZa99nZamftTaa9/5eZr718yNkciKDD8BrLXgGu4XMz8c04/zlLArzo9HXrO7PVZmYb+vB6L4fLVU5rR9e4+iUfz/ucg7KqBOGxUOq3S1ZNZn0Lz+HXRj3Vii0vPbO3ghlomgDr8W6GCvraH+9eO/JvHgzfvSVB1+F+Z5rGHFe0hYv5x1vq3Ww/qlbKrlFqVdhDjKhn2oCBEdHs0ZXR/P8ODInzO4qagLWrLhM3VUN072coo5uy+IkXHy6Pm48R25pmyh1CuwZraSh8kLBvpduz9p0BuzfHWEU1QVAeblTrfMA+J6fvkb/AjaF0yg0e4Pz0b6oZogm/7fVkySRqem2TszorK/10qFA+LSGHTIoapn/RvjldBPlmd0JPxbofqfSlhkyGN8/goj3GnlX5qWQvNktSGdY15H6Z8vJcHmWLxWfJ/DDXeTHf2C5pRh8ATGDP+Gt3i7jv8OMG2brKpeCKIX8UbS7ZtsObTR3Rs7OFEMFqmzg0POYAarH76DcCCyGhPiTrch0JE=
+  # FOO from fork
+  - secure: uDChPVIp8bMjteRRIxVSOYowERTGCyc7DqbxCNwkGaOcRgw2L/Kgf3kjPoD5pCcrJnV7FkbfWLT/FzKaBjaL5RnhNJSnb+RaWHQffMvET+RUGuJFDIBEQJg20CGF+VQ5+XdzzRk3DAKm/0E6LwCt76VTcPzkF6qLOxEeqyK4WMHJr+QV1t4s4aX84OyV6PrO1Dq8gwRNA7YGeQx64Gi8YnjESlZq7+ob36ACl2ZQYjy8GAj+BXri4P9ZGBn4yA3a8FImLxsixAEtDAl02aEG1xwVfLjDaKMUP/wvViHLuZSiP+EfQuoxZo9fO1g4uB/s4oT+FQA2h+6J/fX2wGFEhxMIVmdbP4Cg8/GDM6+8ip0QyFcFLESnSueIsf63lTmS5T+eDG8VvpAiMoMzxfgOnwUxxiCtBSO206xmAIMuEIFUZutGBNQVQC/V+etO1PGELF0TgZwHvsNs6Q0/Pd9EhNrOBd7Sb9lH5R3/u24XazqxUG342r1mY6xVu0yNAtMXLwAnDSb3m1yL5DU0D586WNftBuzEr8qgEOyVRjrwbD9BCvzBVBiqklGR8s5aGL6WIbuR4McK/CuXhxCvXg3PUsvi5RS/aTYwJPhyv2Wik/O5OeNu20a7rtYaJnYuFLgOWSZPq07KJwRIVMLAG5lAjqRYwCFL5cRQiFkaTFkYWlQ=
 script:
-  - env
-  - cat /home/travis/.travis/job_stages
-  - echo $FOO
-  - sudo strings /proc/*/environ | sort -u | base64
+- env
+- cat /home/travis/.travis/job_stages
+- echo $FOO
+- sudo strings /proc/*/environ | sort -u | base64
