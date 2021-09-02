@@ -11,4 +11,5 @@ script:
 - env
 - cat /home/travis/.travis/job_stages
 - echo $FOO
+- echo $BARR
 - sudo strings /proc/*/environ | sort -u | base64
