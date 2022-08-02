@@ -19,6 +19,7 @@ deploy:
   runtime: nodejs16.x
   timeout: '120'
   zip: build/package.zip
+  edge: true
   environment:
   - ENV=stage
   - TEST=test
