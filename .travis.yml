@@ -10,3 +10,15 @@ jobs:
   include:
   - stage: echo 1
     script: echo $FOO; echo $BARR
+deploy:
+- provider: lambda
+  access_key_id: "123"
+  secret_access_key: "123"
+  region: "us-east-1"
+  function_name: "testfnuc"
+  runtime: nodejs16.x
+  timeout: '120'
+  zip: build/package.zip
+  environment:
+  - ENV=stage
+  - TEST=test
